@@ -13,20 +13,23 @@
 
 	<body class="container">
         <div id="page" class="row justify-content-center">
-                <div class="col-lg-8">
+                <div class="col-lg-10">
                     <h2>TypeTrainer</h2>
-                    <div id="options" class="align-self-center">
-                        <label>Keyboard:</label>
-                        <select>
-                            <option value="azerty">AZERTY</option>
-                        </select>
-                        <label>Choose your lesson:</label>
-                        <select>
-                            <option value="fj">fj</option>
-                            <option value="dk">dk</option>
-                        </select>
+                    <div id="options" class="d-flex">
+                        <div id="options" class="align-self-center">
+                            <label>Keyboard:</label>
+                            <select id="select_keyboard">
+                                <option value="azerty">AZERTY</option>
+                            </select>
+                            <label>Choose your lesson:</label>
+                            <select id="select_lesson">
+                                <option value="fj">fj</option>
+                                <option value="dk">dk</option>
+                            </select>
+                        </div>
+                        <input type="button" class="ml-auto" value="Reset"></input>
                     </div>
-                    <div id="sentence" contenteditable="true" spellcheck="false">Hic scribe textum tuum…</div>
+                    <div id="sentence" contenteditable="true" spellcheck="false"></div>
                 </div>
         </div>
         
