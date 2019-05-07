@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="static/bootstrap-4.0.0-dist/css/bootstrap.min.css">
         <link rel="stylesheet/less" type="text/css" href="static/css/typetrainer.less" />
         <link rel="icon" sizes="15x10" href="static/images/keyboard.png">
+        <style>@font-face{font-family: "RobotoRegular"; src: url("static/fonts/Roboto/Roboto-Regular.ttf")}</style>
         <title>TypeTrainer</title>
 	</head>
 
@@ -14,6 +15,17 @@
         <div id="page" class="row justify-content-center">
                 <div class="col-lg-8">
                     <h2>TypeTrainer</h2>
+                    <div id="options" class="align-self-center">
+                        <label>Keyboard:</label>
+                        <select>
+                            <option value="azerty">AZERTY</option>
+                        </select>
+                        <label>Choose your lesson:</label>
+                        <select>
+                            <option value="fj">fj</option>
+                            <option value="dk">dk</option>
+                        </select>
+                    </div>
                     <div id="sentence" contenteditable="true" spellcheck="false">Hic scribe textum tuum…</div>
                 </div>
         </div>
