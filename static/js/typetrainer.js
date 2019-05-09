@@ -14,7 +14,7 @@ $("document").ready(function(){
 
     // Compare target and letter typed in hidden input:
     $("#hidden").keyup(function(event){
-        if(event.keyCode != 16){
+        if(event.keyCode != 16 && event.keyCode != 17 && event.keyCode != 225){
             var input = $(this).val().split("");
             var offset = $(".char_current").attr("id").split("char_")[1];
             if(input[input.length - 1] == $(".char_current").text()){
@@ -29,6 +29,26 @@ $("document").ready(function(){
 });
 
 function write_line(letters){
+    switch(letters){
+        case "letters":
+            letters = "abcdefghijklmnopqrstuvwxyz";
+            break;
+        case "Special characters 1":
+            letters = ",;:!?./§";
+            break;
+        case "Special characters 2":
+            letters = "&é\"'(-è_çà)=°+";
+            break;
+        case "Special characters 3":
+            letters = "#{[|`\\^@]}";
+            break;
+        case "Special characters 4":
+            letters = "*$ù£µ%";
+            break;
+        case "All":
+            letters = "abcdefghijklmnopqrstuvwxyz,;:!?./§&é\"'(-è_çà)=°+#{[|`\\^@]}*$ù£µ%";
+            break;
+    }
     letters_array = letters.split("");
     letters_space = letters + " ";
     letters_space_array = letters_space.split("");
