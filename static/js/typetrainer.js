@@ -30,7 +30,7 @@ $("document").ready(function(){
 
 function write_line(letters){
     switch(letters){
-        case "letters":
+        case "All letters":
             letters = "abcdefghijklmnopqrstuvwxyz";
             break;
         case "Special characters 1":
@@ -45,7 +45,7 @@ function write_line(letters){
         case "Special characters 4":
             letters = "*$ù£µ%";
             break;
-        case "All":
+        case "Everything":
             letters = "abcdefghijklmnopqrstuvwxyz,;:!?./§&é\"'(-è_çà)=°+#{[|`\\^@]}*$ù£µ%";
             break;
     }
