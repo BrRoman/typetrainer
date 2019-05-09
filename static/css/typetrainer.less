@@ -35,8 +35,11 @@ body{
             font-family: monospace;
             font-size: 18pt;
             margin: 10px 0px 10px 0px;
+            outline: none;
             padding: 0px 10px 0px 10px;
+            position: absolute;
             width: 100%;
+            z-index: 2;
 
             .char_normal{
                 background-color: white;
@@ -55,6 +58,13 @@ body{
                 background-color: red;
                 color: black;
             }
+        }
+
+        #hidden{
+            bottom: -30px;
+            height: 10px;
+            position: relative;
+            z-index: 1;
         }
     }
 
