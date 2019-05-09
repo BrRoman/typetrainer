@@ -1,5 +1,5 @@
 static/bootstrap-4.0.0-dist/* linguist-detectable=false
 static/fontawesome-free-5.7.1-web/* linguist-detectable=false
 static/jquery-ui-1.12.1/* linguist-detectable=false
-*.html linguist-detectable=false
-*.css linguist-detectable=false
+index.html linguist-detectable=false
+static/css/* linguist-detectable=false
