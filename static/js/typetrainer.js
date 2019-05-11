@@ -1,15 +1,16 @@
 $("document").ready(function(){
+    var now = 0;
     // Reset sentence:
     // On start:
     $("#hidden").focus();
-    write_line($("#select_lesson option:selected").text());
+    now = write_line($("#select_lesson option:selected").text());
     // On select lesson:
     $("#select_lesson").change(function(){
-        write_line($("#select_lesson option:selected").text());
+        now = write_line($("#select_lesson option:selected").text());
     });
     // On click on Reset:
     $("#reset_sentence").click(function(){
-        write_line($("#select_lesson option:selected").text());
+        now = write_line($("#select_lesson option:selected").text());
     });
 
     // Compare target and letter typed in hidden input:
@@ -24,6 +25,11 @@ $("document").ready(function(){
             else{
                 $("#char_" + offset).addClass("char_error");
             }
+        }
+        if(offset == $("#sentence").text().length - 1){
+            $("#time").text(Math.round((Date.now() - now) / 10) / 100 + " seconds.");
+            $("#errors").text($(".char_error").length);
+            $("#result").css("display", "block");
         }
     });
 });
@@ -72,4 +78,7 @@ function write_line(letters){
     $("#sentence").html(text);
     $("#select_lesson").blur();
     $("#hidden").focus();
+
+    // Return current timestamp:
+    return(Date.now());
 }

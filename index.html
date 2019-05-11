@@ -13,37 +13,42 @@
 
 	<body class="container">
         <div id="page" class="row justify-content-center">
-                <div class="col-lg-10">
-                    <h2>TypeTrainer</h2>
-                    <div id="options" class="d-flex">
-                        <div id="options" class="align-self-center">
-                            <label>Keyboard:</label>
-                            <select id="select_keyboard">
-                                <option value="azerty">AZERTY</option>
-                            </select>
-                            <label>Choose your lesson:</label>
-                            <select id="select_lesson">
-                                <option value="fj">fj</option>
-                                <option value="dk">dk</option>
-                                <option value="sl">sl</option>
-                                <option value="qm">qm</option>
-                                <option value="gh">gh</option>
-                                <option value="ghfjdkslqm">ghfjdkslqm</option>
-                                <option value="rueizoapty">rueizoapty</option>
-                                <option value="wxcvbn">wxcvbn</option>
-                                <option value="letters">All letters</option>
-                                <option value="special_1">Special characters 1</option>
-                                <option value="special_2">Special characters 2</option>
-                                <option value="special_3">Special characters 3</option>
-                                <option value="special_4">Special characters 4</option>
-                                <option value="all">Everything</option>
-                            </select>
-                        </div>
-                        <input type="button" id="reset_sentence" class="ml-auto btn btn-primary" value="New exercise"></input>
+            <div class="col-lg-10">
+                <h2>TypeTrainer</h2>
+                <div id="options" class="d-flex">
+                    <div id="options" class="align-self-center">
+                        <label>Keyboard:</label>
+                        <select id="select_keyboard">
+                            <option value="azerty">AZERTY</option>
+                        </select>
+                        <label>Choose your lesson:</label>
+                        <select id="select_lesson">
+                            <option value="fj">fj</option>
+                            <option value="dk">dk</option>
+                            <option value="sl">sl</option>
+                            <option value="qm">qm</option>
+                            <option value="gh">gh</option>
+                            <option value="ghfjdkslqm">ghfjdkslqm</option>
+                            <option value="rueizoapty">rueizoapty</option>
+                            <option value="wxcvbn">wxcvbn</option>
+                            <option value="letters">All letters</option>
+                            <option value="special_1">Special characters 1</option>
+                            <option value="special_2">Special characters 2</option>
+                            <option value="special_3">Special characters 3</option>
+                            <option value="special_4">Special characters 4</option>
+                            <option value="all">Everything</option>
+                        </select>
                     </div>
-                    <div id="sentence" spellcheck="false" tabindex="0"></div>
-                    <input type="text" id="hidden" autofocus></input>
+                    <input type="button" id="reset_sentence" class="ml-auto btn btn-primary" value="New exercise"></input>
                 </div>
+                <div id="sentence" spellcheck="false" tabindex="0"></div>
+                <input type="text" id="hidden" autofocus></input>
+            </div>
+        </div>
+
+        <div class="row justify-content-center" id="result">
+            <p class="text-center green">Time: <span id="time"></span></p>
+            <p class="text-center red">Errors: <span id="errors"></span></p>
         </div>
         
         <footer class="text-center">
