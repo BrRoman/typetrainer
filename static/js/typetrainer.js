@@ -28,6 +28,8 @@ $("document").ready(function(){
         }
         if(offset == $("#sentence").text().length - 1){
             $("#time").text(Math.round((Date.now() - now) / 10) / 100 + " seconds.");
+            $("#speed_sec").text((50 / parseFloat($("#time").text())).toFixed(2));
+            $("#speed_min").text((parseFloat($("#speed_sec").text()) * 60).toFixed(2));
             $("#errors").text($(".char_error").length);
             $("#result").css("display", "block");
         }
@@ -35,6 +37,7 @@ $("document").ready(function(){
 });
 
 function write_line(letters){
+    $("#result").css("display", "none");
     switch(letters){
         case "All letters":
             letters = "abcdefghijklmnopqrstuvwxyz";
